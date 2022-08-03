@@ -1,0 +1,184 @@
+@logo-info-text-color: #A1A1A1;
+@ment-title-text-color: #9195A1;
+@icon-font-color: #9195a1;
+@iconfont-content-color: #f4f4f5;
+@icon-font-color-active: #FFFFFF;
+@iconfont-content-color-active: #3B73F0;
+@menu-text-color: #9195a1;
+@menu-text-color-active: #1F1D2B;
+
+.sider {
+    height: 100%;
+    padding-top: 32px;
+    background: @sidebar-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /** logo部分样式 **/
+    &_logo {
+        padding-left: 32px;
+        transition: @tran-03;
+
+        &_img {
+            width: 60px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        &_info {
+            &>span {
+                display: block;
+            }
+
+            &_title {
+                font-size: 20px;
+                color: @text-color;
+                letter-spacing: -0.48px;
+                font-weight: 600;
+            }
+
+            &_msg {
+                font-size: 14px;
+                color: @logo-info-text-color;
+                letter-spacing: -0.34px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    /** menu部分样式 **/
+    &_menu {
+        margin-top: 40px;
+        padding-left: 32px;
+        transition: @tran-02;
+
+        &_title {
+            font-size: 14px;
+            color: @ment-title-text-color;
+            letter-spacing: -0.34px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        &>ul>li {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .iconfont_content {
+                width: 28px;
+                height: 28px;
+                background: @iconfont-content-color ;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .iconfont {
+                    font-size: 14px;
+                    color: @icon-font-color;
+                }
+            }
+
+            .iconfont_content.actived {
+                background: @iconfont-content-color-active ;
+
+                .iconfont {
+                    color: @icon-font-color-active;
+                }
+            }
+
+            .menu_text {
+                font-size: 14px;
+                color: @menu-text-color;
+                letter-spacing: -0.34px;
+                font-weight: 600;
+                margin-left: 16px;
+            }
+
+            .menu_text.actived {
+                color: @menu-text-color-active;
+            }
+        }
+    }
+
+    /** 主题切换器部分样式 **/
+    &_theme {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 32px;
+
+        &_text {
+            font-size: 14px;
+            color: #9195A1;
+            letter-spacing: -0.34px;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+    }
+
+    /** 底部样式 **/
+    &_bottom {
+        width: 100%;
+        height: 48px;
+        box-shadow: 0px -1px 0px 0px rgba(221, 223, 228, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .iconfont {
+            font-size: 22px;
+            color: #9195A1;
+        }
+    }
+}
+
+/** 侧边栏打开状态样式 **/
+.open {
+    width: 256px;
+    transition: @tran-03;
+}
+
+/** 侧边栏关闭状态样式 **/
+.close {
+    width: 92px;
+    transition: @tran-03;
+
+    /** sider **/
+    .sider {
+        &_logo {
+            padding-left: 16px;
+
+            &_info {
+                display: none;
+            }
+        }
+
+        &_menu {
+            margin-top: 20px;
+
+            &_title {
+                display: none;
+            }
+
+            &>ul>li {
+                .menu_text {
+                    display: none;
+                }
+            }
+        }
+
+        &_theme {
+            margin-left: 16px;
+            transition: @tran-03;
+
+            &_text {
+                display: none;
+            }
+        }
+    }
+}

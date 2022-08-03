@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3518056 */
+  src: url('iconfont.woff2?t=1657639834826') format('woff2'),
+       url('iconfont.woff?t=1657639834826') format('woff'),
+       url('iconfont.ttf?t=1657639834826') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-Chevron-Left2:before {
+  content: "\e610";
+}
+
+.icon-a-Chevron-Right2:before {
+  content: "\e611";
+}
+
+.icon-application:before {
+  content: "\e63b";
+}
+
+.icon-stock-batch:before {
+  content: "\e63e";
+}
+
+.icon-settlement:before {
+  content: "\e63d";
+}
+
+.icon-supplier-ship:before {
+  content: "\e63f";
+}
+
+.icon-srock-inquire:before {
+  content: "\e640";
+}
+
+.icon-project-manage:before {
+  content: "\e641";
+}
+
