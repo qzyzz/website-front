@@ -18,14 +18,13 @@ const Sider = (props) => {
     const changeTheme = () => {
         settingsStore.changeMode()
     }
-
     /**
      * 切换侧边栏状态
      */
     const changeSiderState = () => {
         settingsStore.changeSiderState()
     }
-
+    // 跳转页面
     const toPage = (item) => {
         history.push(item.path)
         setActived(item.meta.key)
@@ -34,9 +33,9 @@ const Sider = (props) => {
     const getMenus = (menus) => {
         return menus.map(item => (
             <li onClick={() => toPage(item)} key={item.meta.key} >
-                <span className={`iconfont_content ${actived === item.meta.key ? 'actived' : ''}`}>
+                <div className={`iconfont_content ${actived === item.meta.key ? 'actived' : ''}`}>
                     <span className={`iconfont ${item.meta.icon}`} />
-                </span>
+                </div>
                 <span className={`menu_text ${actived === item.meta.key ? 'actived' : ''}`}>{item.meta.label}</span>
             </li >
         ))
@@ -67,12 +66,8 @@ const Sider = (props) => {
             <div>
                 {/* theme部分 */}
                 <div className='sider_theme'>
-                    <Switch
-                        checkedChildren='深色'
-                        unCheckedChildren="浅色"
-                        onChange={changeTheme}
-                    />
-                    <span className='sider_theme_text'>{settingsStore.mode === 'dark' ? '深色模式' : '浅色模式'}</span>
+                    <Switch onChange={changeTheme} />
+                    <div className='sider_theme_text'>{settingsStore.mode === 'dark' ? '深色模式' : '浅色模式'}</div>
                 </div>
                 {/* bottom部分 */}
                 <div onClick={changeSiderState} className={`sider_bottom ${settingsStore.siderOpen}`}>

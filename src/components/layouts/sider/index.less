@@ -6,6 +6,11 @@
 @iconfont-content-color-active: #3B73F0;
 @menu-text-color: #9195a1;
 @menu-text-color-active: #1F1D2B;
+.textOneMix() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .sider {
     height: 100%;
@@ -27,8 +32,10 @@
         }
 
         &_info {
+            transition: @tran-03 ;
             &>span {
                 display: block;
+                .textOneMix
             }
 
             &_title {
@@ -69,6 +76,7 @@
 
             .iconfont_content {
                 width: 28px;
+                min-width: 28px;
                 height: 28px;
                 background: @iconfont-content-color ;
                 border-radius: 10px;
@@ -96,6 +104,8 @@
                 letter-spacing: -0.34px;
                 font-weight: 600;
                 margin-left: 16px;
+                transition: @tran-03 ;
+                .textOneMix
             }
 
             .menu_text.actived {
@@ -110,6 +120,7 @@
         display: flex;
         align-items: center;
         margin-left: 32px;
+        transition: @tran-03;
 
         &_text {
             font-size: 14px;
@@ -117,6 +128,8 @@
             letter-spacing: -0.34px;
             font-weight: 400;
             margin-left: 10px;
+            transition: @tran-03 ;
+            .textOneMix
         }
     }
 
@@ -146,6 +159,7 @@
 /** 侧边栏关闭状态样式 **/
 .close {
     width: 92px;
+    overflow: hidden;
     transition: @tran-03;
 
     /** sider **/
@@ -154,7 +168,7 @@
             padding-left: 16px;
 
             &_info {
-                display: none;
+                opacity: 0;
             }
         }
 
@@ -162,22 +176,21 @@
             margin-top: 20px;
 
             &_title {
-                display: none;
+                opacity: 0;
             }
 
             &>ul>li {
                 .menu_text {
-                    display: none;
+                    opacity: 0;
                 }
             }
         }
 
         &_theme {
-            margin-left: 16px;
-            transition: @tran-03;
+            margin-left: 20px;
 
             &_text {
-                display: none;
+                opacity: 0;
             }
         }
     }
