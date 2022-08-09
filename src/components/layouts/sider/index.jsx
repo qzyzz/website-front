@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { observer } from 'mobx-react'
 import { Switch } from 'antd'
 import { useStore } from '../../../stores'
@@ -12,6 +12,12 @@ const Sider = (props) => {
     const { routers } = props
     const history = useContext(routerContext)
     const [actived, setActived] = useState(routers[0].meta.key)
+    // localStorage存储主题和侧边栏信息，保证刷新时不重置
+    useEffect(() => {
+        settingsStore.changeMode(localStorage.getItem('theme'))
+        settingsStore.changeSiderState(localStorage.getItem('siderOpen'))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     /**
      * 切换主题
      */
@@ -24,12 +30,19 @@ const Sider = (props) => {
     const changeSiderState = () => {
         settingsStore.changeSiderState()
     }
-    // 跳转页面
+    /**
+     * 跳转页面
+     * @param {routerItem} item 
+     */
     const toPage = (item) => {
         history.push(item.path)
         setActived(item.meta.key)
     }
-
+    /**
+     * 根据路由信息动态生成菜单
+     * @param {Object} menus 
+     * @returns 
+     */
     const getMenus = (menus) => {
         return menus.map(item => (
             <li onClick={() => toPage(item)} key={item.meta.key} >
@@ -66,7 +79,9 @@ const Sider = (props) => {
             <div>
                 {/* theme部分 */}
                 <div className='sider_theme'>
-                    <Switch onChange={changeTheme} />
+                    <Switch
+                        checked={settingsStore.mode === 'dark'}
+                        onChange={changeTheme} />
                     <div className='sider_theme_text'>{settingsStore.mode === 'dark' ? '深色模式' : '浅色模式'}</div>
                 </div>
                 {/* bottom部分 */}

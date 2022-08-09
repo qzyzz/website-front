@@ -1,8 +1,8 @@
 import BlogRouter from '@/router/index'
 import routers from '@/router/routers'
-import '@/assets/style/global.less'
+import 'antd/dist/antd.variable.min.css'
 
-function App() {
+const App = () => {
   return (
     < BlogRouter routers={routers} />
   )

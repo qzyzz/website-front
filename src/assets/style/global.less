@@ -1,8 +1,32 @@
 @import './normalize.less';
-@import './theme/white.less';
+/* Transition */
+@tran-02: all 0.2s ease;
+@tran-03: all 0.3s ease;
+@tran-04: all 0.4s ease;
+@tran-05: all 0.5s ease;
 
 * {
     font-family: Arial, sans-serif;
+}
+
+:root.light {
+    --bgColorTop: #fff;
+    --bgColorBase: #F4F4F5;
+    --bgColorBottom: #DDDFE4;
+    --bgColorOther: #F4F4F5;
+    --fontColorTop: #1F1D2B;
+    --fontColorBase: #3B3948;
+    --fontColorBottom: #9195A1;
+}
+
+:root.dark {
+    --bgColorTop: #202025;
+    --bgColorBase: #17161B;
+    --bgColorBottom: #2E2E35;
+    --bgColorOther: #2E2E35;
+    --fontColorTop: #fff;
+    --fontColorBase: #DDDFE4;
+    --fontColorBottom: #9195A1;
 }
 
 /* 导航滚动条 */
