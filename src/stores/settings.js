@@ -6,8 +6,8 @@ class settingsClass {
         makeAutoObservable(this)
     }
 
-    mode = 'light'
-    siderOpen = 'open'
+    mode = 'light' //暗黑和明亮模式
+    siderOpen = 'open'  //侧边栏吗开关
 
     /**
      * 改变主题
@@ -22,6 +22,7 @@ class settingsClass {
             localStorage.setItem('theme', this.mode)
             document.documentElement.className = this.mode
         }
+        // 改变antd主题颜色
         ConfigProvider.config({
             theme: {
                 primaryColor: this.mode === 'dark' ? '#2E2E35' : '#1890ff',

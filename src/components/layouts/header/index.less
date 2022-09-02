@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .search {
+        display: flex;
+        align-items: center;
+
+        .search_input {
+            width: 480px;
+            height: 44px;
+            background: var(--bgColorTop, #fff);
+            border-radius: 12px;
+            padding: 12px 13px;
+            padding-right: 48px;
+            border: 0;
+            outline: none;
+            transition: all .3s;
+        }
+
+        .search_input::placeholder {
+            color: var(--fontColorBottom, #9195A1);
+        }
+
+        .search_icon {
+            margin-left: -34px;
+            font-size: 20px;
+            color: #9195A1;
+            cursor: pointer;
+        }
+    }
+}

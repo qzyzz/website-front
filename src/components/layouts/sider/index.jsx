@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import { Switch } from 'antd'
 import { useStore } from '../../../stores'
 import { routerContext } from '../index'
-import titleImg from '@/assets/imgs/header.jpg'
+import titleImg from '@/assets/imgs/header.png'
 import './index.less'
 
 /** Sider */
