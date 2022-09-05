@@ -1,0 +1,37 @@
+{
+  "id": "3629097",
+  "name": "home",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "20647579",
+      "name": "icon_bilibili",
+      "font_class": "icon_bilibili",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "929965",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "4937000",
+      "name": "github-fill",
+      "font_class": "github-fill",
+      "unicode": "e885",
+      "unicode_decimal": 59525
+    },
+    {
+      "icon_id": "31644913",
+      "name": "juejin-copy",
+      "font_class": "juejin-copy",
+      "unicode": "e892",
+      "unicode_decimal": 59538
+    }
+  ]
+}

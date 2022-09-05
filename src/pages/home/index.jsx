@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { ArrowRightOutlined } from '@ant-design/icons'
 import headerImg from '@/assets/imgs/header/product.png'
+// import BiliBili from '@/assets/icons/home_icons/bilibili.svg'
+// import GitHub from '@/assets/icons/home_icons/github.svg'
+// import WeChat from '@/assets/icons/home_icons/wechat.svg'
 import './index.less'
 
 const Home = (props) => {
@@ -56,6 +59,41 @@ const Home = (props) => {
                 <ul className="indicator_bar">
                     {cerateLiElement()}
                 </ul>
+            </div>
+
+            <div className="module_data">
+                <div className='data_title'>数据模块</div>
+                <div className='data'>
+                    {/* 统计数字 */}
+                    <div className='data_statist'>
+                        <div className='total_visit'>
+                            <span>4399</span>
+                            <span>总访问量</span>
+                        </div>
+                        <div className='today_visit'>
+                            <span>2200</span>
+                            <span>今日访问量</span>
+                        </div>
+                        <div className='info_icon'>
+                            <span className='iconfont icon-wechat'></span>
+                            <span className='iconfont icon-icon_bilibili'></span>
+                            <span className='iconfont icon-github-fill'></span>
+                            <span className='iconfont icon-juejin-copy'></span>
+                        </div>
+                    </div>
+                    {/* 个人分享 */}
+                    <div className="data_share">
+
+                    </div>
+                    {/* 项目作品 */}
+                    <div className="data_project">
+
+                    </div>
+                    {/* 技术交流 */}
+                    <div className="data_exchange">
+
+                    </div>
+                </div>
             </div>
         </div>
     )

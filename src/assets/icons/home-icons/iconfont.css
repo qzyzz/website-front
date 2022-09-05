@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3629097 */
+  src: url('iconfont.woff2?t=1662301707905') format('woff2'),
+       url('iconfont.woff?t=1662301707905') format('woff'),
+       url('iconfont.ttf?t=1662301707905') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_bilibili:before {
+  content: "\e600";
+}
+
+.icon-wechat:before {
+  content: "\e891";
+}
+
+.icon-github-fill:before {
+  content: "\e885";
+}
+
+.icon-juejin-copy:before {
+  content: "\e892";
+}
+

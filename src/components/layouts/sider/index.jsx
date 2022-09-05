@@ -76,7 +76,7 @@ const Sider = (props) => {
                 </div>
             </div>
 
-            <div>
+            <div className='button_operation'>
                 {/* theme部分 */}
                 <div className='sider_theme'>
                     <Switch

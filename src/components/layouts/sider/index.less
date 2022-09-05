@@ -1,3 +1,5 @@
+@import '@/assets/icons/sider-icons/iconfont.css';
+
 @logo-info-text-color: #A1A1A1;
 @ment-title-text-color: #9195A1;
 @icon-font-color: #9195a1;
@@ -119,6 +121,11 @@
     }
 
     /** 主题切换器部分样式 **/
+    // .button_operation{
+    //     background: var(--bgColorTop);
+    //     position: fixed;
+    //     bottom: 0;
+    // }
     &_theme {
         height: 70px;
         display: flex;
@@ -173,6 +180,7 @@
 
             &_info {
                 opacity: 0;
+                display: none;
             }
         }
 
@@ -181,6 +189,7 @@
 
             &_title {
                 opacity: 0;
+                display: none;
             }
 
             &>ul>li {
