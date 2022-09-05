@@ -57,7 +57,7 @@ const Sider = (props) => {
     return (
         <div className={`sider ${settingsStore.siderOpen}`}>
 
-            <div>
+            <div className='sider_project'>
                 {/* logo部分 */}
                 <div className='sider_logo'>
                     <img className='sider_logo_img' src={titleImg} alt="" />
