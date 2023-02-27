@@ -1,4 +1,5 @@
 @import '@/assets/icons/home-icons/iconfont.css';
+
 .flexCenterMix() {
     display: flex;
     justify-content: center;
@@ -161,7 +162,7 @@
             &_exchange {
                 margin-top: 30px;
                 height: 300px;
-                flex: 0 0 23%;
+                flex: 0 0 23.5%;
                 margin-left: 2%;
                 border-radius: 16px;
                 color: var(--fontColorTop, #1f1d2b);
@@ -176,31 +177,32 @@
                 .total_visit,
                 .today_visit {
                     height: 40%;
+
                     &>span {
                         display: block;
                     }
 
                     &>span:nth-child(1) {
-                         font-size: 48px;
-                         color: var(--fontColorTop, #1f1d2b);
-                         letter-spacing: -0.13px;
-                         font-weight: 700;
+                        font-size: 48px;
+                        color: var(--fontColorTop, #1f1d2b);
+                        letter-spacing: -0.13px;
+                        font-weight: 700;
                     }
                 }
 
-                .today_visit{
+                .today_visit {
                     margin-top: 6px;
                 }
 
-                .info_icon{
+                .info_icon {
                     height: 20%;
                     position: relative;
 
-                    img{
+                    img {
                         width: 20px;
                     }
 
-                    &>span{
+                    &>span {
                         display: inline-block;
                         width: 32px;
                         height: 32px;
@@ -214,7 +216,7 @@
                         cursor: pointer;
                     }
 
-                    &>span:hover{
+                    &>span:hover {
                         color: #fff;
                     }
 
@@ -251,6 +253,103 @@
                         background: #006cff;
                         border: 1px solid #006cff;
                     }
+                }
+            }
+        }
+
+        .data_share,
+        .data_project,
+        .data_exchange {
+            padding: 30px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .header {
+                margin-bottom: 0;
+
+                .icon_content {
+                    width: 56px;
+                    height: 56px;
+                    line-height: 56px;
+                    text-align: center;
+                    background: #22BF87;
+                    border-radius: 12px;
+
+                    .iconfont {
+                        font-size: 28px;
+                        color: #fff;
+                    }
+                }
+
+                .count {
+                    font-size: 36px;
+                    color: #22BF87;
+                    letter-spacing: -0.1px;
+                    font-weight: 400;
+                }
+            }
+
+            .word {
+
+                &_title {
+                    font-size: 18px;
+                    color: var(--fontColorTop, #1f1d2b);
+                    letter-spacing: -0.05px;
+                    font-weight: 600;
+                }
+
+                &_detail {
+                    font-size: 14px;
+                    color: var(--fontColorBottom, #9195a1);
+                    letter-spacing: -0.04px;
+                    font-weight: 400;
+                }
+            }
+
+            .to_page{
+
+                .icon_bg{
+                    float: right;
+                    width: 80px;
+                    height: 40px;
+                    line-height: 48px;
+                    text-align: center;
+                    background: #3B73F0;
+                    border-radius: 22px;
+                }
+
+                .btn_icon{
+                    color: #fff;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .data_project{
+
+            .header{
+
+                .icon_content {
+                    background: #A048FA;
+                }
+
+                .count {
+                    color: #A048FA;
+                }
+            }
+        }
+
+        .data_exchange {
+
+            .header{
+                
+                .icon_content {
+                    background: #FF7551;
+                }
+
+                .count {
+                    color: #FF7551;
                 }
             }
         }

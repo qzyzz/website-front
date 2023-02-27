@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import { ArrowRightOutlined } from '@ant-design/icons'
 import headerImg from '@/assets/imgs/header/product.png'
-// import BiliBili from '@/assets/icons/home_icons/bilibili.svg'
-// import GitHub from '@/assets/icons/home_icons/github.svg'
-// import WeChat from '@/assets/icons/home_icons/wechat.svg'
 import './index.less'
 
 const Home = (props) => {
@@ -83,15 +80,57 @@ const Home = (props) => {
                     </div>
                     {/* 个人分享 */}
                     <div className="data_share">
-
+                        <div className='header'>
+                            <div className="icon_content">
+                                <span className='iconfont icon-application' />
+                            </div>
+                            <span className='count'>12</span>
+                        </div>
+                        <div className='word'>
+                            <div className='word_title'>个人分享</div>
+                            <div className='word_detail'>我的日常记录，平时所想、记录旅游、摄影…</div>
+                        </div>
+                        <div className='to_page'>
+                            <div className='icon_bg'>
+                                <ArrowRightOutlined className='btn_icon' />
+                            </div>
+                        </div>
                     </div>
                     {/* 项目作品 */}
                     <div className="data_project">
-
+                        <div className='header'>
+                            <div className="icon_content">
+                                <span className='iconfont icon-stock-batch' />
+                            </div>
+                            <span className='count'>12</span>
+                        </div>
+                        <div className='word'>
+                            <div className='word_title'>项目作品</div>
+                            <div className='word_detail'>设计及开发项目总结，不限于开发完成的项目，包括临摹作品的下载。</div>
+                        </div>
+                        <div className='to_page'>
+                            <div className='icon_bg'>
+                                <ArrowRightOutlined className='btn_icon' />
+                            </div>
+                        </div>
                     </div>
                     {/* 技术交流 */}
                     <div className="data_exchange">
-
+                        <div className='header'>
+                            <div className="icon_content">
+                                <span className='iconfont icon-settlement' />
+                            </div>
+                            <span className='count'>12</span>
+                        </div>
+                        <div className='word'>
+                            <div className='word_title'>技术交流</div>
+                            <div className='word_detail'>分享一些解决问题的方法</div>
+                        </div>
+                        <div className='to_page'>
+                            <div className='icon_bg'>
+                                <ArrowRightOutlined className='btn_icon' />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
