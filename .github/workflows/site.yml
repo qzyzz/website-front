@@ -30,8 +30,8 @@ jobs:
           server: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PWD }}
-          local-dir: dist
-          remote-dir: /
+          local-dir: /dist/
+          server-dir: /
 
       # - name: SSH Deploy
       #   uses: easingthemes/ssh-deploy@v2.2.11
