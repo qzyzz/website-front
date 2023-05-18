@@ -40,5 +40,5 @@ jobs:
           ARGS: '-avzr --delete'
           SOURCE: 'dist'
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'ubuntu'
+          REMOTE_USER: 'root'
           TARGET: '/www/front/blog/'
