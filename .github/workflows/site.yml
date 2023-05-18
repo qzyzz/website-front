@@ -25,14 +25,13 @@ jobs:
       - run: yarn build
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PWD }}
-          local-dir: ./dist/
-          server-dir: ./
-
+          local-dir: dist
+          remote-dir: /
 
       # - name: SSH Deploy
       #   uses: easingthemes/ssh-deploy@v2.2.11
@@ -42,4 +41,4 @@ jobs:
       #     SOURCE: 'build'
       #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
       #     REMOTE_USER: 'ubuntu'
-      #     TARGET: '/www/front/blog/'看0
+      #     TARGET: '/www/front/blog/'
